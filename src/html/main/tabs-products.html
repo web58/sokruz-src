@@ -1,0 +1,68 @@
+<section class="tabs-products">
+  <h2 class="visually-hidden">Рекомендуемые товары</h2>
+  <div class="slider" data-tabs="product-tabs">
+
+    <header class="tabs-products__top">
+      <div class="tabs-products__top-wrapper container">
+
+        <ul class="list-reset tabs-products__titles" data-tabs="nav">
+          <li><button class="btn-reset hd hd--h1 tabs-products__title" type="button" data-tabs="btn">Популярные товары</button></li>
+          <li><button class="btn-reset hd hd--h1 tabs-products__title" type="button" data-tabs="btn">Новинки</button></li>
+        </ul>
+
+        <div class="slider__control">
+          <div class="tabs-products__slider-control">
+            <button class="btn-reset tabs-products__popular-prev slider__nav-btn" type="button" aria-label="Предыдущий слайд">
+              <svg width="21" height="13" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-arr-left"></use>
+              </svg>
+            </button>
+            <button class="btn-reset tabs-products__popular-next slider__nav-btn" type="button" aria-label="Следующий слайд">
+              <svg width="21" height="13" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-arr-right"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="tabs-products__slider-control">
+            <button class="btn-reset tabs-products__novelties-prev slider__nav-btn" type="button" aria-label="Предыдущий слайд">
+              <svg width="21" height="13" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-arr-left"></use>
+              </svg>
+            </button>
+            <button class="btn-reset tabs-products__novelties-next slider__nav-btn" type="button" aria-label="Следующий слайд">
+              <svg width="21" height="13" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-arr-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <div class="container">
+      <div data-tabs="panel">
+        <div class="tabs-products__slider tabs-products__popular slider">
+          <ul class="list-reset swiper-wrapper slider__wrapper">
+            <li class="swiper-slide">@include('../product-card.html')</li>
+            <li class="swiper-slide">@include('../product-card-furniture.html')</li>
+            <li class="swiper-slide">@include('../product-card-other.html')</li>
+          </ul>
+          <div class="tabs-products__pagination tabs-products__popular-bullets slider__pagination"></div>
+        </div>
+      </div>
+      <div data-tabs="panel">
+        <div class="tabs-products__slider tabs-products__novelties slider">
+          <ul class="list-reset swiper-wrapper slider__wrapper">
+            <li class="swiper-slide">@include('../product-card.html')</li>
+            <li class="swiper-slide">@include('../product-card-furniture.html')</li>
+            <li class="swiper-slide">@include('../product-card-other.html')</li>
+          </ul>
+          <div class="tabs-products__pagination tabs-products__novelties-bullets slider__pagination"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

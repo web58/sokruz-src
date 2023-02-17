@@ -1,0 +1,45 @@
+.action-product {
+  position: relative;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid var(--gray80);
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 24px 0;
+    color: var(--black);
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  @include media-min ($md) {
+    &__img {
+      height: 180px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__img {
+      height: 220px;
+    }
+  }
+}

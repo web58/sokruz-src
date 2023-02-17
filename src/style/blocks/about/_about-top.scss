@@ -1,0 +1,11 @@
+.about-top {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &--reverse {
+      flex-direction: column-reverse;
+      padding-bottom: 30px;
+    }
+  }
+}

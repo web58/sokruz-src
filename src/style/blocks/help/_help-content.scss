@@ -1,0 +1,51 @@
+.help-content {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background-color: var(--gray10);
+
+  &__list {
+    display: grid;
+    gap: 20px;
+    counter-reset: help;
+  }
+
+  &__list-item {
+    position: relative;
+    counter-increment: help;
+
+    &::before {
+      content: '0'counter(help);
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 160px;
+      line-height: 1.2;
+      z-index: 0;
+      color: var(--pink20);
+    }
+  }
+
+  @include media-min ($md) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__list {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__list-item {
+      grid-column: span 5;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-column: span 7;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.about-info {
+  &__top {
+    border-top: 1px solid var(--gray80);
+    border-bottom: 1px solid var(--gray80);
+    background-color: var(--white);
+    margin-bottom: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__descr {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include media-min ($xl) {
+    &__top {
+      border-top: none;
+    }
+
+    &__title {
+      padding-left: 50px;
+    }
+
+    &__descr {
+      width: 540px;
+      padding-left: 50px;
+    }
+  }
+}

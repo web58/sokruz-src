@@ -1,0 +1,38 @@
+.collections-material {
+  position: relative;
+  width: 150px;
+
+  & a {
+    color: var(--black);
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 94px;
+    border: 1px solid var(--gray80);
+    object-fit: cover;
+  }
+
+  @include media-min ($md) {
+    width: 100%;
+  }
+
+  @include media-min ($xl) {
+
+    &__img {
+      height: 100px;
+    }
+  }
+}

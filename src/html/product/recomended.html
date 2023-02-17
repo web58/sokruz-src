@@ -1,0 +1,32 @@
+<section class="recomended">
+
+  <header class="recomended__top slider">
+    <div class="recomended__top-wrapper container">
+      <h2 class="indent-reset hd hd--h1 recomended__title">Рекомендованные товары</h2>
+      <div class="recomended__control slider__control">
+        <button class="btn-reset recomended__prev slider__nav-btn" type="button" aria-label="Предыдущий слайд">
+          <svg width="21" height="13" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-arr-left"></use>
+          </svg>
+        </button>
+        <button class="btn-reset recomended__next slider__nav-btn" type="button" aria-label="Следующий слайд">
+          <svg width="21" height="13" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-arr-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="recomended__slider slider">
+      <ul class="list-reset swiper-wrapper slider__wrapper">
+        <li class="swiper-slide">@include('../product-card.html')</li>
+        <li class="swiper-slide">@include('../product-card-furniture.html')</li>
+        <li class="swiper-slide">@include('../product-card-other.html')</li>
+      </ul>
+      <div class="recomended__pagination slider__pagination"></div>
+    </div>
+  </div>
+
+</section>

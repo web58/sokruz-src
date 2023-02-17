@@ -1,0 +1,57 @@
+.partnership-steps {
+  &__top {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray80);
+    background-color: var(--pink30);
+  }
+
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background-color: var(--pink20);
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+    counter-reset: partnership_steps;
+
+    & > li {
+      position: relative;
+      counter-increment: partnership_steps;
+
+      &::after {
+        content: '0'counter(partnership_steps);
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 160px;
+        line-height: 1.2;
+        color: var(--pink20);
+        z-index: 0;
+      }
+    }
+  }
+
+  &__modal-btn {
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__content {
+      padding-top: 40px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

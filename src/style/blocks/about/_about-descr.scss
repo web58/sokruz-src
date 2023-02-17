@@ -1,0 +1,13 @@
+.about-descr {
+  padding: 30px 0;
+
+  &__tagline {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    & p {
+      margin: 4px 0;
+    }
+  }
+}

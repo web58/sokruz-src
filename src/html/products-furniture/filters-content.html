@@ -1,0 +1,47 @@
+<form class="form filters-content">
+  <div>
+    <ul class="list-reset filters-content__select-list">
+      <li>
+        <label class="form__select-wrapper filters-content__select">
+          <span class="visually-hidden">Настил</span>
+          <select class="form__input" name="higth">
+            <option disabled selected>Настил</option>
+          </select>
+        </label>
+      </li>
+      <li>
+        <label class="form__select-wrapper filters-content__select">
+          <span class="visually-hidden">Механизм</span>
+          <select class="form__input" name="firmness">
+            <option disabled selected>Механизм</option>
+          </select>
+        </label>
+      </li>
+      <li>
+        <label class="form__select-wrapper filters-content__select">
+          <span class="visually-hidden">Цена от</span>
+          <select class="form__input" name="price">
+            <option disabled selected>Цена от</option>
+            <option value="1">до 5000 руб</option>
+            <option value="2">от 5000 руб до 10000 руб</option>
+            <option value="3">от 10000 руб</option>
+          </select>
+        </label>
+      </li>
+    </ul>
+    <ul class="list-reset filters-content__checkbox-list">
+      <li>
+        <input class="visually-hidden form__checkbox" type="checkbox" name="filter-box" id="filter-box">
+        <label for="filter-box">Бельевой ящик</label>
+      </li>
+      <li>
+        <input class="visually-hidden form__checkbox" type="checkbox" name="filter-complect" id="filter-complect">
+        <label for="filter-complect">Комплектация креслом</label>
+      </li>
+    </ul>
+  </div>
+  <div class="filters-content__btns">
+    <button class="btn-reset btn filters-content__btn" type="submit">Показать</button>
+    <button class="btn-reset btn btn--outlined filters-content__btn" type="reset">Сбросить</button>
+  </div>
+</form>

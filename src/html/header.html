@@ -1,0 +1,111 @@
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-top__container">
+      <div class="header-top__contacts">
+        <p>Пензенская обл., г. Кузнецк, ул. Энергетиков, 23</p>
+        <a href="mailto:sokruz@yandex.ru">sokruz@yandex.ru</a>
+      </div>
+      <div class="header-top__messengers">
+        @include('messengers.html')
+      </div>
+    </div>
+  </div>
+  <div class="header-main">
+    <div class="container header-main__container">
+      <button class="btn-reset header-main__burger just-burger" type="button" aria-label="Меню" id="just-burger">
+        <span class="just-burger__line just-burger__line--top"></span>
+        <span class="just-burger__line just-burger__line--middle"></span>
+        <span class="just-burger__line just-burger__line--bottom"></span>
+      </button>
+      <a class="header-main__logo" href="page-main.html">
+        <img src="img/logo.svg" width="90" height="33" alt="Сокруз">
+      </a>
+      <div class="header-main__search">
+        @include('site-search.html')
+      </div>
+      <div class="header-main__cb">
+        <a href="tel:84953747517">8 (495) 374-75-17</a>
+        <button class="btn-reset small header-main__cb-btn" type="button" data-hystmodal="#callback-modal">Заказать звонок</button>
+      </div>
+      <p class="indent-reset header-main__shedule">
+        <span>9:00 – 18:00</span>
+        <span class="small header-main__shedule-days">пн-пт</span>
+      </p>
+    </div>
+  </div>
+  <nav class="header-menu site-menu">
+    <div class="container">
+      <ul class="list-reset site-menu__list">
+        <li class="menu-item-has-children">
+          <a href="page-catalog.html">Каталог</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="page-catalog-cat.html">Матрасы</a>
+            </li>
+            <li>
+              <a href="page-catalog-cat.html">Мягкая мебель</a>
+            </li>
+            <li>
+              <a href="page-catalog-cat.html">Кровати</a>
+            </li>
+            <li>
+              <a href="page-catalog-cat.html">Корпусная мебель</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="page-about.html">О компании</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="page-news.html">Новости</a>
+            </li>
+            <li>
+              <a href="page-store.html">Где купить</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="page-actions.html">Акции</a>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="page-help.html">Полезное</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="page-sale.html">Распродажа</a>
+            </li>
+            <li>
+              <a href="page-calculator.html">Калькулятор матрасов</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="page-partnership.html">Партнерам</a>
+        </li>
+        <li>
+          <a href="page-contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  @include('mobile-menu.html')
+</header>
+<header class="site-header-fixed anim-drop-down">
+  <div class="header-main">
+    <div class="container header-main__container">
+      <a class="header-main__logo" href="page-main.html">
+        <img src="img/logo.svg" width="90" height="33" alt="Сокруз">
+      </a>
+      <div class="header-main__search">
+        @include('site-search.html')
+      </div>
+      <div class="header-main__cb">
+        <a href="tel:84953747517">8 (495) 374-75-17</a>
+        <button class="btn-reset small header-main__cb-btn" type="button" data-hystmodal="#callback-modal">Заказать звонок</button>
+      </div>
+      <p class="indent-reset header-main__shedule">
+        <span>9:00 – 18:00</span>
+        <span class="small header-main__shedule-days">пн-пт</span>
+      </p>
+    </div>
+  </div>
+</header>

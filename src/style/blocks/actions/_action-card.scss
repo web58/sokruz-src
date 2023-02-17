@@ -1,0 +1,67 @@
+.action-card {
+  position: relative;
+  background-color: var(--white);
+  border: 1px solid var(--gray80);
+  display: grid;
+  grid-template-rows: 200px auto;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: var(--yellow10);
+  }
+
+  &__poster {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__meta {
+    display: grid;
+    row-gap: 16px;
+    padding: 24px;
+  }
+
+  &__period {
+    color: var(--accent);
+  }
+
+  &__excerpt {
+    & p {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    margin-top: 4px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  @include media-min ($md) {
+    grid-template-columns: 330px auto;
+    grid-template-rows: none;
+    min-height: 200px;
+
+    &__meta {
+      padding: 30px;
+    }
+
+    &__link {
+      margin-top: 14px;
+    }
+  }
+
+  @include media-min ($xl) {
+    grid-template-columns: 350px auto;
+  }
+}

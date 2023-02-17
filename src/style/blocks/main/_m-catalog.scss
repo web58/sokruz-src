@@ -1,0 +1,15 @@
+.m-catalog {
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--gray80);
+
+  &__top {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray80);
+    margin-bottom: 30px;
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 100px;
+  }
+}

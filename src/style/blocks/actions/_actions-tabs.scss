@@ -1,0 +1,59 @@
+.actions-tabs {
+  padding-bottom: 60px;
+
+  &__top {
+    background-color: var(--pink20);
+    border-bottom: 1px solid var(--gray80);
+    margin-bottom: 30px;
+  }
+
+  &__nav {
+    padding: 8px 0;
+    display: grid;
+    row-gap: 16px;
+  }
+
+  &__nav-btn {
+    color: var(--gray60);
+    text-align: left;
+    transition: color .15s ease-in-out;
+
+    &[aria-selected="true"] {
+      color: var(--black);
+      pointer-events: none;
+    }
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  @include media-min ($md) {
+    &__top {
+      margin-bottom: 40px;
+    }
+
+    &__nav {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__nav {
+      display: flex;
+    }
+
+    &__grid {
+      gap: 10px;
+    }
+  }
+}

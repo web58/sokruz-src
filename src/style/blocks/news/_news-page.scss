@@ -1,0 +1,26 @@
+.news-page {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background-color: var(--orange10);
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

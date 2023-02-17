@@ -1,0 +1,34 @@
+.collections-item {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    & > li {
+      margin: 15px;
+    }
+  }
+
+  @include media-min ($md) {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin: 0;
+
+      & > li {
+        margin: 0;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}

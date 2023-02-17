@@ -1,0 +1,52 @@
+.contacts {
+  padding-bottom: 60px;
+  background-color: var(--gray10);
+
+  &__map {
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 300px;
+    background-image: url('../img/map-template.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--gray80);
+    border-top: none;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 30px;
+    background-color: var(--white);
+    border: 1px solid var(--gray80);
+  }
+
+  @include media-min ($md) {
+    &__map {
+      margin-bottom: 30px;
+      height: 360px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__map {
+      height: 500px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+}

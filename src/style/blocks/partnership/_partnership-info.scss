@@ -1,0 +1,93 @@
+.partnership-info {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    border: 1px solid var(--gray80);
+    display: grid;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  &__link {
+    padding: 10px;
+    color: var(--black);
+    background-color: var(--white);
+    text-align: left;
+    text-decoration: none;
+    transition: background-color .15s ease-in-out, color .15s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &--arrow {
+      &::after {
+        content: '';
+        display: inline-block;
+        margin-left: 10px;
+        width: 21px;
+        height: 13px;
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='15' viewBox='0 0 22 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7.5H21M21 7.5L14.8077 14M21 7.5L14.8077 1' stroke='%23E4332C'/%3E%3C/svg%3E ");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 21px 13px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--accent);
+      background-color: var(--yellow10);
+      text-decoration: underline;
+    }
+  }
+
+  @include media-min ($md) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    &__img {
+      height: 250px;
+    }
+
+    &__link {
+      padding: 25px 10px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__img {
+      height: 310px;
+    }
+
+    &__link {
+      padding: 10px;
+    }
+  }
+}

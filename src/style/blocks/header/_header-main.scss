@@ -1,0 +1,139 @@
+.header-main {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0;
+  color: var(--black);
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray20);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger {
+    display: block;
+  }
+
+  &__logo {
+    display: flex;
+
+    & img {
+      display: block;
+      width: 90px;
+      height: 33px;
+    }
+  }
+
+  &__search {
+    display: none;
+  }
+
+  &__cb {
+    & a {
+      display: flex;
+      font-size: 0;
+      font-weight: 500;
+      color: var(--black);
+      width: 38px;
+      height: 38px;
+      background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.9165 16.3334C10.2498 19.1483 12.0091 21.639 14.1943 23.8057C16.3794 25.9723 18.8795 27.7315 21.6944 29.0834L24.4166 23.6112L34.8332 25.0001V34.7778C32.5739 34.889 30.3424 34.7593 28.1387 34.389C25.9535 34.0186 23.861 33.4168 21.8609 32.5833C18.1387 31.0649 14.8424 28.8889 11.9721 26.0556C9.1202 23.2038 6.93502 19.9075 5.4165 16.1667C4.58317 14.1667 3.98132 12.0649 3.61094 9.86119C3.24057 7.65749 3.11094 5.42601 3.22206 3.16675H12.9998L14.3887 13.6112L8.9165 16.3334Z' fill='%23E4332C'/%3E%3C/svg%3E");
+      text-decoration: none;
+    }
+  }
+
+  &__cb-btn {
+    display: none;
+  }
+
+  &__shedule {
+    display: none;
+  }
+
+  @include media-min ($md) {
+    padding: 9px 0;
+
+    &__logo {
+      & img {
+        width: 142px;
+        height: 51px;
+      }
+    }
+
+    &__cb {
+      position: relative;
+
+      & a {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font-size: 20px;
+        width: auto;
+        height: auto;
+        background-image: none;
+        white-space: nowrap;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 6px 0;
+
+    &__burger {
+      display: none;
+    }
+
+    &__logo {
+      & img {
+        width: 160px;
+        height: 57px;
+      }
+    }
+
+    &__search {
+      display: block;
+      width: 400px;
+    }
+
+    &__cb {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      & a {
+        position: static;
+        margin-bottom: 4px;
+        transform: none;
+        transition: color .15s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__cb-btn {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__shedule {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__shedule-days {
+      margin-top: 4px;
+      color: var(--gray60);
+    }
+  }
+}

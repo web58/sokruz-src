@@ -1,0 +1,13 @@
+.actions-collections {
+  &__list {
+    display: grid;
+    row-gap: 50px;
+
+    & > li {
+      &:not(:first-child) {
+        padding-top: 30px;
+        border-top: 1px solid var(--gray80);
+      }
+    }
+  }
+}

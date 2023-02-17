@@ -1,0 +1,40 @@
+.product-descr {
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    margin-bottom: 30px;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+
+    & td {
+      padding: 8px;
+      border: 1px solid var(--gray20);
+      vertical-align: top;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  @include media-min ($md) {
+    max-width: 825px;
+
+    &__table {
+      & td {
+        &:first-of-type {
+          width: 45%;
+        }
+      }
+    }
+  }
+}

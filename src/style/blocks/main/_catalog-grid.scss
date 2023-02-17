@@ -1,0 +1,113 @@
+.catalog-grid {
+  display: grid;
+  gap: 20px;
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--gray80);
+    height: 280px;
+  }
+
+  &__category {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform .3s ease-in-out;
+
+    & > span {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      padding: 16px;
+      background-color: var(--white);
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 31px 20px;
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--yellow10);
+      opacity: 0;
+      z-index: 0;
+      transition: opacity .3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        opacity: 0.8;
+      }
+
+      & + .catalog-grid__category {
+        transform: translateY(-50%);
+
+        & > span {
+          padding-right: 47px;
+          background-color: transparent;
+          background-image: url("data:image/svg+xml,%3Csvg width='33' height='22' viewBox='0 0 33 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 11H31M31 11L21.859 21M31 11L21.859 1' stroke='%23E4332C' stroke-width='2'/%3E%3C/svg%3E ");
+          transform: translateY(50%);
+        }
+      }
+    }
+  }
+
+  @include media-min ($md) {
+    gap: 10px;
+    grid-template-rows: repeat(9, 1fr);
+
+    &__card {
+      grid-auto-flow: dense;
+      height: auto;
+
+      &:nth-child(2n) {
+        grid-column: 2 /3;
+      }
+
+      &:nth-child(1),
+      &:nth-child(4) {
+        grid-row: span 4;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-row: span 5;
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.catalog-cat-grid {
+  display: grid;
+  gap: 20px;
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--gray80);
+    height: 280px;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--yellow10);
+      opacity: 0;
+      z-index: 0;
+      transition: opacity .3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        opacity: 1;
+      }
+
+      & + .catalog-cat-grid__meta {
+        transform: translateY(-100%);
+
+        & .catalog-cat-grid__meta-wrapper {
+          border-top: none;
+          transform: translateY(100%);
+        }
+
+        & .catalog-cat-grid__category {
+          background-color: transparent;
+
+          &::after {
+            display: inline-block;
+          }
+        }
+
+        & .catalog-cat-grid__descr {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__meta {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform .3s ease-in-out;
+  }
+
+  &__meta-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid var(--gray80);
+    transition: transform .3s ease-in-out;
+  }
+
+  &__category {
+    padding: 16px;
+    background-color: var(--white);
+    transition: background-color .15s ease-in-out;
+
+    &::after {
+      content: '';
+      display: none;
+      margin-left: 10px;
+      width: 21px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='15' viewBox='0 0 22 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 7.5H21M21 7.5L14.8077 14M21 7.5L14.8077 1' stroke='%23E4332C'/%3E%3C/svg%3E ");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 21px 13px;
+    }
+  }
+
+  &__descr {
+    display: none;
+    padding: 0 16px;
+
+    animation-name: fade-up-long;
+    animation-fill-mode: forwards;
+    animation-duration: .6s;
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 65px;
+    object-fit: cover;
+  }
+
+  @include media-min ($md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @include media-min ($xl) {
+    grid-template-columns: repeat(3, 1fr);
+
+    &__card {
+      height: 300px;
+    }
+
+    &__category {
+      padding: 24px;
+    }
+
+    &__descr {
+      padding: 0 24px;
+    }
+
+    &__image {
+      padding-bottom: 80px;
+    }
+  }
+}

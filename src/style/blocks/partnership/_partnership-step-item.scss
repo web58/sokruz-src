@@ -1,0 +1,15 @@
+.partnership-step-item {
+  padding: 30px;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--gray80);
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+}

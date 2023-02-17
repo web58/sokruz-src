@@ -1,0 +1,91 @@
+.not-found {
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  &__cover {
+    margin-bottom: 10px;
+    height: 350px;
+    background-image: url('../img/404-cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--gray80);
+  }
+
+  &__decor-title {
+    font-size: 160px;
+    line-height: 1.2;
+    color: var(--pink40);
+    font-weight: 700;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tagline {
+    margin: 24px 0;
+  }
+
+  &__search {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &__search-descr {
+    margin-top: 24px;
+  }
+
+  &__link-back {
+    width: 100%;
+  }
+
+  @include media-min ($md) {
+    padding-top: 40px;
+    width: 70%;
+    margin: 0 auto;
+
+    &__cover {
+      height: 470px;
+    }
+
+    &__tagline {
+      margin: 30px 0 40px;
+    }
+
+    &__search-descr {
+      margin-top: 16px;
+    }
+
+    &__link-back {
+      width: auto;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    width: auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    &__cover {
+      width: 540px;
+      height: 570px;
+      margin: 0;
+      margin-right: 95px;
+      flex-shrink: 0;
+    }
+
+    &__tagline {
+      margin: 60px 0 50px;
+    }
+
+    &__search {
+      margin-bottom: 40px;
+    }
+  }
+}

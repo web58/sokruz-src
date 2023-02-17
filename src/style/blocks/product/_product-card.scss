@@ -1,0 +1,146 @@
+.product-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--gray80);
+  transition: background-color .3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    background-color: var(--yellow10);
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--gray80);
+    object-fit: contain;
+    user-select: none;
+  }
+
+  &__descr {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 16px;
+    width: 24px;
+    height: 24px;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--accent);
+    }
+  }
+
+  &__attr {
+    color: var(--gray60);
+    flex: 1 1 auto;
+
+    & > li:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__price {
+    padding-top: 16px;
+  }
+
+  &__badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    & > div {
+      margin: 5px;
+    }
+  }
+
+  @include media-min ($md) {
+    max-width: 280px;
+
+    &__img {
+      height: 180px;
+    }
+
+    &__price {
+      padding-top: 20px;
+    }
+
+    &__badges {
+      height: 180px;
+    }
+  }
+
+  @include media-min ($xl) {
+    max-width: 250px;
+
+    &__img {
+      height: 220px;
+    }
+
+    &__descr {
+      padding: 20px;
+    }
+
+    &__price {
+      padding-top: 24px;
+    }
+
+    &__link {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__link-icon {
+      width: 21px;
+      height: 13px;
+    }
+
+    &__badges {
+      height: 220px;
+    }
+  }
+}

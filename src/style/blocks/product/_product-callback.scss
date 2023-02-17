@@ -1,0 +1,32 @@
+.product-callback {
+  border: 1px solid var(--gray80);
+  background-color: var(--yellow10);
+  padding: 16px;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__descr {
+    margin-bottom: 30px;
+  }
+
+  @include media-min ($md) {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__descr {
+      margin-bottom: 0;
+    }
+
+    &__btn {
+      flex-shrink: 0;
+      margin-left: 50px;
+    }
+  }
+}

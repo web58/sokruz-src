@@ -1,0 +1,63 @@
+.store-item {
+  position: relative;
+  border: 1px solid var(--gray80);
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--gray80);
+  }
+
+  &__title {
+    padding: 16px;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: var(--yellow10);
+    }
+
+    & a {
+      color: var(--black);
+      text-decoration: none;
+      transition: color .3s ease-in-out;
+      outline: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &[target="_blank"] {
+        &::after {
+          content: '';
+          display: inline-block;
+          margin-left: 10px;
+          width: 18px;
+          height: 18px;
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 1H12.3478M19 1L11.5652 8.43478M19 1V7.65217M18.2174 11.5652V19H1V1.78261H9.21739' stroke='%23E4332C'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__title {
+      padding: 30px;
+    }
+  }
+}

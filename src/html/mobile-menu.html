@@ -1,0 +1,74 @@
+<div class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu__content anim-fade-in">
+    <div class="container">
+      <nav class="mobile-menu__nav site-menu">
+        <ul class="list-reset site-menu__list">
+          <li class="menu-item-has-children">
+            <a href="page-catalog.html">Каталог</a>
+            <ul class="sub-menu">
+              <li>
+                <a href="page-catalog-cat.html">Матрасы</a>
+              </li>
+              <li>
+                <a href="page-catalog-cat.html">Мягкая мебель</a>
+              </li>
+              <li>
+                <a href="page-catalog-cat.html">Кровати</a>
+              </li>
+              <li>
+                <a href="page-catalog-cat.html">Корпусная мебель</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item-has-children">
+            <a href="page-about.html">О компании</a>
+            <ul class="sub-menu">
+              <li>
+                <a href="page-news.html">Новости</a>
+              </li>
+              <li>
+                <a href="page-store.html">Где купить</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="page-actions.html">Акции</a>
+          </li>
+          <li class="menu-item-has-children">
+            <a href="page-help.html">Полезное</a>
+            <ul class="sub-menu">
+              <li>
+                <a href="page-sale.html">Распродажа</a>
+              </li>
+              <li>
+                <a href="page-calculator.html">Калькулятор матрасов</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="page-partnership.html">Партнерам</a>
+          </li>
+          <li>
+            <a href="page-contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-menu__search">
+        @include('site-search.html')
+      </div>
+      <div class="mobile-menu__cb">
+        <a href="tel:84953747517">8 (495) 374-75-17</a>
+        <button class="btn-reset small mobile-menu__cb-btn" type="button" data-hystmodal="#callback-modal">Заказать звонок</button>
+      </div>
+      <p class="indent-reset mobile-menu__shedule">
+        <span>9:00 – 18:00</span>
+        <span class="small mobile-menu__shedule-days">пн-пт</span>
+      </p>
+      <div class="mobile-menu__contacts">
+        <p>Пензенская обл., г. Кузнецк, ул. Энергетиков, 23</p>
+        <a href="mailto:sokruz@yandex.ru">sokruz@yandex.ru</a>
+      </div>
+      @include('messengers.html')
+    </div>
+  </div>
+</div>

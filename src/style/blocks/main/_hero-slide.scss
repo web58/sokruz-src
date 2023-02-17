@@ -1,0 +1,61 @@
+.hero-slide {
+
+  &__img {
+    display: block;
+    width: 100%;
+    min-height: 240px;
+    object-fit: cover;
+  }
+
+  &__description {
+    padding-top: 24px;
+    padding-bottom: 30px;
+    color: var(--black);
+    background-color: var(--white);
+  }
+
+  &__slogan {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    & span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__slogan-lead {
+    margin-top: 4px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  @include media-min ($md) {
+    &__img {
+      height: 800px;
+    }
+
+    &__description {
+      padding: 32px 0;
+      color: var(--white);
+      background-color: transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 570px;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    &__slogan-lead {
+      margin-top: 12px;
+    }
+
+    &__text {
+      font-size: 20px;
+      margin-bottom: 36px;
+    }
+  }
+}

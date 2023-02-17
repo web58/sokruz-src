@@ -1,0 +1,10 @@
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--gray80);
+
+  @include media-min ($md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

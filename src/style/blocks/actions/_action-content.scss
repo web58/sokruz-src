@@ -1,0 +1,44 @@
+.action-content {
+  padding-bottom: 60px;
+
+  &__poster {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    max-width: 920px;
+    padding-bottom: 40px;
+  }
+
+  &__products {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--gray80);
+  }
+
+  &__products-title {
+    margin-bottom: 30px;
+  }
+
+  &__products-list {
+    display: grid;
+    gap: 20px;
+  }
+
+  @include media-min ($md) {
+    &__products-list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__products-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

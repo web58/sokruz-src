@@ -1,0 +1,20 @@
+.hero-slider {
+  border-bottom: 1px solid var(--gray80);
+
+  &__pagination {
+    margin-bottom: 20px;
+  }
+
+  @include media-min ($md) {
+    &__control {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: var(--white);
+    }
+  }
+}
+
+@import "hero-slide";

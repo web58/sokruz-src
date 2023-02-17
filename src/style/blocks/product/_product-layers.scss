@@ -1,0 +1,36 @@
+.product-layers {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 455px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 16px;
+  }
+
+  @include media-min ($xl) {
+    &__img {
+      flex-shrink: 0;
+      max-width: 445px;
+      margin-bottom: 0;
+      margin-left: 30px;
+      transform: translateY(-30px);
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+    }
+  }
+}

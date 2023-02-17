@@ -1,0 +1,19 @@
+.messengers {
+  display: flex;
+  margin: -6px;
+
+  & > li {
+    margin: 6px;
+  }
+
+  & a {
+    display: flex;
+    transition: transform .15s ease-in-out, filter .15s ease-in-out;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      transform: scale(1.2);
+    }
+  }
+}

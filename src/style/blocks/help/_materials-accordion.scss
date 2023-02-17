@@ -1,0 +1,81 @@
+.materials-accordion {
+  &__item {
+    border-bottom: 1px solid var(--gray80);
+  }
+
+  &__content {
+
+    &[aria-hidden="false"] {
+      border-top: 1px solid var(--gray80);
+    }
+  }
+
+  &__content-wrapper {
+    padding: 16px;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 8px 16px;
+    padding-right: 50px;
+    width: 100%;
+    text-align: left;
+    color: var(--black);
+    transition: color .15s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      width: 26px;
+      height: 26px;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.10156 1.54883L10.1016 10.5488L19.1016 1.54883' stroke='%23E4332C' stroke-width='2'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      transition: transform .15s ease-in-out;
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotateZ(180deg);
+      }
+    }
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  @include media-min ($md) {
+    &__content-wrapper {
+      padding: 20px;
+    }
+
+    &__btn {
+      padding: 8px 20px;
+      padding-right: 60px;
+
+      &::after {
+        right: 20px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__content-wrapper {
+      padding: 30px;
+    }
+
+    &__btn {
+      padding: 8px 30px;
+      padding-right: 70px;
+
+      &::after {
+        right: 30px;
+      }
+    }
+  }
+}

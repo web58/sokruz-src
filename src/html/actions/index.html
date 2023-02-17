@@ -1,0 +1,51 @@
+<section>
+  <div class="site-title">
+    <div class="container">
+      <h1 class="indent-reset hd hd--h1">Акции</h1>
+    </div>
+  </div>
+  <div class="actions-tabs" data-tabs="action-tabs">
+    <div class="actions-tabs__top">
+      <div class="container">
+        <ul class="list-reset actions-tabs__nav" data-tabs="nav">
+          <li><button class="btn-reset hd hd--h2 actions-tabs__nav-btn" type="button" data-tabs="btn">Складская программа</button></li>
+          <li><button class="btn-reset hd hd--h2 actions-tabs__nav-btn" type="button" data-tabs="btn">Временные</button></li>
+          <li><button class="btn-reset hd hd--h2 actions-tabs__nav-btn" type="button" data-tabs="btn">Коллекция тканей</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div data-tabs="panel">
+        <div class="catalog-products">
+          <ul class="list-reset catalog-products__list">
+            <li>
+              @include('../product-card.html')
+            </li>
+            <li>
+              @include('../product-card.html')
+            </li>
+            <li>
+              @include('../product-card.html')
+            </li>
+            <li>
+              @include('../product-card.html')
+            </li>
+            <li>
+              @include('../product-card.html')
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-tabs="panel">
+        <div class="actions-tabs__grid">
+          @include('action-card.html')
+          @include('action-card.html')
+          @include('action-card.html')
+        </div>
+      </div>
+      <div data-tabs="panel">
+        @include('actions-collections.html')
+      </div>
+    </div>
+  </div>
+</section>

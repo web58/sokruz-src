@@ -1,0 +1,53 @@
+.store-point {
+  position: relative;
+  border: 1px solid var(--gray80);
+  padding: 16px;
+  padding-left: 84px;
+  display: grid;
+  row-gap: 16px;
+  overflow: hidden;
+  counter-increment: store;
+
+  &::before {
+    content: counter(store);
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 68px;
+    width: 1px;
+    background-color: var(--gray80);
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  @include media-min ($md) {
+    padding: 30px;
+    padding-left: 126px;
+
+    &::before {
+      left: 30px;
+      top: 30px;
+    }
+
+    &::after {
+      left: 96px;
+
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<section>
+  <div class="site-title">
+    <div class="container">
+      <h1 class="indent-reset hd hd--h1">Серия Классик Люкс</h1>
+    </div>
+  </div>
+  <div class="accordion filters">
+    <div class="filters__top">
+      <div class="container">
+        <button class="btn-reset hd hd--h4 accordion__control filters__title">Фильтры</button>
+      </div>
+    </div>
+    <div class="accordion__content">
+      <div class="container">
+        @include('filters-content.html')
+      </div>
+    </div>
+  </div>
+  <div class="catalog-products">
+    <div class="container">
+      <ul class="list-reset catalog-products__list">
+        <li>
+          @include('../product-card.html')
+        </li>
+        <li>
+          @include('../product-card.html')
+        </li>
+        <li>
+          @include('../product-card.html')
+        </li>
+        <li>
+          @include('../product-card.html')
+        </li>
+        <li>
+          @include('../product-card.html')
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

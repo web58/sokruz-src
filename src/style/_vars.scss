@@ -1,0 +1,60 @@
+// COLORS
+:root {
+  --white: #FFFFFF;
+  --black: #3D4248;
+
+  --red: #E4332C;
+
+  //gray
+  --gray10: #FAF9FA;
+  --gray20: #E0E4E8;
+  --gray40: #BAC2CA;
+  --gray60: #949DA6;
+  --gray80: #636B73;
+  --gray100: var(--black);
+
+  //pink
+  --pink10: #F6F4F5;
+  --pink20: #ECE9EB;
+  --pink30: #DCD5D8;
+  --pink40: #DCD5D8;
+
+  //orange
+  --orange10: #F7F4F2;
+  --orange20: #F2ECEA;
+
+  //yellow
+  --yellow10: #FCF5ED;
+  --yellow20: #E8E1D9;
+  --yellow60: rgba(252, 245, 237, 0.6);
+
+  //calculator groups
+  --group-active: #F2EFC7;
+  --group1: #DFCAD2;
+  --group2: #C7ABB9;
+  --group3: #B894A6;
+  --group4: #A78392;
+  --group5: #907782;
+
+  --accent: var(--red);
+  --error: rgb(227, 6, 19, 0.2);
+
+  --shadow-blue: 2px 1px 10px rgba(60, 67, 85, 0.1);
+  --shadow-blue-up: 0px -1px 10px rgba(60, 67, 85, 0.06);
+
+  --spinner-color: var(--gray20);
+  --spinner-size: 1.3rem;
+  --spinner-item-size: 0.37em;
+  --spinner-speed: 2500ms;
+}
+
+//BREAKPOINTS FOR MOBILE FIRST
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// Fonts
+$main-font: "Raleway";
+
+$mobile-min-width: 360px;

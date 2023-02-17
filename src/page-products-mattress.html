@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/meta.html')
+  <title>Title document</title>
+</head>
+
+<body class="indent-reset lnum">
+  <div aria-hidden="true" id="site-top"></div>
+  <div class="site-container">
+    @include('html/header.html')
+    <div class="site-content">
+      @include('html/breadcrumbs.html')
+      <main>
+        @include('html/products-mattress/index.html')
+      </main>
+    </div>
+    @include('html/footer.html')
+  </div>
+  @include('html/scripts.html')
+</body>
+
+</html>

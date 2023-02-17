@@ -1,0 +1,10 @@
+.header-menu {
+  display: none;
+
+  @include media-min ($xl) {
+    display: block;
+    color: var(--black);
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray20);
+  }
+}

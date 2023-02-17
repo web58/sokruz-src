@@ -1,0 +1,21 @@
+.about-advantages-item {
+  padding: 30px;
+  border: 1px solid var(--gray80);
+
+  &__icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    & p {
+      margin: 0;
+    }
+  }
+}

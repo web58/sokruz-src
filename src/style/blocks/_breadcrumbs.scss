@@ -1,0 +1,17 @@
+.breadcrumbs {
+  padding-top: 24px;
+  padding-bottom: 16px;
+
+  & a {
+    color: var(--black);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & .current-item {
+    color: var(--gray60);
+  }
+}

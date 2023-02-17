@@ -1,0 +1,57 @@
+.m-help {
+  padding-bottom: 60px;
+  background-color: var(--pink20);
+
+  &__top {
+    padding: 16px 0;
+    margin-bottom: 30px;
+    background-color: var(--pink30);
+    border-bottom: 1px solid var(--gray80);
+  }
+
+  &__grid {
+    display: grid;
+    gap: 20px;
+    counter-reset: num;
+  }
+
+  &__grid-item {
+    position: relative;
+    counter-increment: num;
+
+    &::before {
+      content: '0'counter(num);
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 160px;
+      line-height: 1.2;
+      z-index: 0;
+      color: var(--pink20);
+    }
+  }
+
+  @include media-min ($md) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__grid {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__grid-item {
+      grid-column: span 5;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-column: span 7;
+      }
+    }
+  }
+}

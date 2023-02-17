@@ -1,0 +1,63 @@
+.store-cat {
+  padding-bottom: 10px;
+
+  &__country {
+    &:not(:first-child) {
+      border-top: 1px solid var(--gray80);
+    }
+
+    &--no-coll {
+      & .store-cat__cities {
+        column-count: auto;
+      }
+    }
+  }
+
+  &__country-name {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__region {
+    margin-bottom: 24px;
+
+    &:not(:first-of-type) {
+      padding-top: 30px;
+      border-top: 1px solid var(--gray80);
+    }
+  }
+
+  &__cities {
+    padding-bottom: 50px;
+    column-gap: 30px;
+    column-count: 2;
+    margin: -8px 0;
+
+    & a {
+      display: inline-block;
+      margin: 8px 0;
+      color: var(--black);
+      transition: color .15s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  @include media-min ($md) {
+    padding-top: 10px;
+
+    &__cities {
+      column-count: 3;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 30px;
+
+    &__cities {
+      column-count: 4;
+    }
+  }
+}

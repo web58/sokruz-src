@@ -1,0 +1,55 @@
+.contacts-item {
+  &__block-title {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 6px;
+
+    &--inner {
+      margin-top: 16px;
+    }
+  }
+
+  &__phone {
+    & > a {
+      font-size: 16px;
+      line-height: 1.4;
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    &--big {
+      & > a {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__adress {
+    margin-bottom: 6px;
+  }
+
+  &__shedule {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__shedule-days {
+    color: var(--gray60);
+    margin-bottom: 4px;
+  }
+
+  &__email {
+    & > a {
+      color: var(--black);
+    }
+  }
+
+  &__cb-btn {
+    margin-top: 24px;
+  }
+}

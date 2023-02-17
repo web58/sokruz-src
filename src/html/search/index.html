@@ -1,0 +1,32 @@
+<section>
+  <div class="site-title">
+    <div class="container">
+      <h1 class="indent-reset hd hd--h1">Поиск</h1>
+    </div>
+  </div>
+  <div class="search-content">
+    <div class="container">
+      <div class="search-content__searchbar">
+        @include('../site-search.html')
+      </div>
+      <p class="indent-reset search-content__result-text">По вашему запросу найден 1 товар</p>
+      <ul class="list-reset search-content__found-list">
+        <li>
+          @include('../product-card.html')
+        </li>
+      </ul>
+      <div class="search-content__callback">
+        <div class="decor-block">
+          <img class="decor-block__img" src="img/decor-img.jpg" alt="" aria-hidden="true">
+          <div class="decor-block__content">
+            <h2 class="indent-reset hd hd--h1 decor-block__title">Не нашли, что искали?</h2>
+            <div class="decor-block__text">
+              <p>Задайте нам вопрос по товару, который вас интересует. Пришлем ответ в течение 5 рабочих дней на электронную почту.</p>
+            </div>
+            <button class="btn-reset btn decor-block__link" type="button" data-hystmodal="#ask-question-modal">Задать вопрос</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

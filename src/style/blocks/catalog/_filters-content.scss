@@ -1,0 +1,75 @@
+.filters-content {
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  &__select-list {
+    display: grid;
+    row-gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__checkbox-list {
+    display: grid;
+    row-gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__select {
+    & select {
+      background-color: var(--white);
+      border-color: var(--gray20);
+    }
+
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06836 1.03271L7.06836 7.03272L13.0684 1.03271' stroke='%233D4248'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    margin-top: 20px;
+  }
+
+  &__btn {
+    flex-basis: 100%;
+    margin: 0 10px;
+    padding: 10px 24px;
+  }
+
+  @include media-min ($md) {
+    &__select-list {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 12px;
+      column-gap: 20px;
+      margin-bottom: 16px;
+    }
+
+    &__checkbox-list {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 0;
+      margin: 0 -10px;
+      margin-bottom: 16px;
+
+      & > li {
+        margin: 0 10px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    display: grid;
+    grid-template-columns: auto 330px;
+    align-items: start;
+    column-gap: 20px;
+    padding-top: 16px;
+    padding-bottom: 0;
+
+    &__btns {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.header-top {
+  display: none;
+
+  @include media-min ($xl) {
+    display: block;
+    color: var(--black);
+    background-color: var(--pink10);
+    padding: 5px 0;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__contacts {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+
+      & > p {
+        margin: 0;
+        margin-right: 60px;
+      }
+
+      & > a {
+        color: var(--black);
+        transition: color .15s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}

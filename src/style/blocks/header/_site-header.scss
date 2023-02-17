@@ -1,0 +1,25 @@
+.site-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  min-width: $mobile-min-width;
+
+  @include media-min ($xl) {
+    position: absolute;
+  }
+}
+
+.site-header-fixed {
+  display: none;
+
+  &--show {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+  }
+}

@@ -1,0 +1,68 @@
+.store-content {
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  &__map {
+    margin-bottom: 30px;
+    height: 300px;
+    border: 1px solid var(--gray80);
+    overflow: hidden;
+
+    &--loading {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:not(:required) {
+        color: transparent;
+        text-shadow: none;
+        background-color: var(--gray10);
+      }
+
+      &:not(:required)::after {
+        content: '';
+        display: block;
+        font-size: var(--spinner-size);
+        width: var(--spinner-item-size);
+        height: var(--spinner-item-size);
+        margin-top: -0.5em;
+        animation: spinner var(--spinner-speed) infinite linear;
+        border-radius: 0.5em;
+        box-shadow:
+          var(--spinner-color) 1.5em 0 0 0,
+          var(--spinner-color) 1.1em 1.1em 0 0,
+          var(--spinner-color) 0 1.5em 0 0,
+          var(--spinner-color) -1.1em 1.1em 0 0,
+          var(--spinner-color) -1.5em 0 0 0,
+          var(--spinner-color) -1.1em -1.1em 0 0,
+          var(--spinner-color) 0 -1.5em 0 0,
+          var(--spinner-color) 1.1em -1.1em 0 0;
+      }
+    }
+  }
+
+  &__stores {
+    display: grid;
+    gap: 10px;
+    counter-reset: store;
+  }
+
+  @include media-min ($md) {
+    padding-top: 40px;
+
+    &__map {
+      margin-bottom: 40px;
+      height: 360px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__map {
+      margin-bottom: 40px;
+      height: 400px;
+    }
+  }
+}
