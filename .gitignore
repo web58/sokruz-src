@@ -10,6 +10,7 @@ Thumbs.db
 
 # игнорировать файлы настроек редакторов
 /.idea/
+/.vscode/
 *.sublime-project
 *.sublime-workspace
 *.komodoproject
