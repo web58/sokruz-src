@@ -98,7 +98,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .is-hidden {
-  display: none;
+  display: none!important;
 }
 
 .indent-reset {
